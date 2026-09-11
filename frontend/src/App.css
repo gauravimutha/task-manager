@@ -1,0 +1,40 @@
+/* App.css — minimal, scoped to app shell only */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0a0c14;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flex row: board scrolls left, TeamList is fixed on the right */
+.main-layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.board-area {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 28px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  align-items: flex-start;
+}
+
+.board-area::-webkit-scrollbar { height: 6px; }
+.board-area::-webkit-scrollbar-track { background: #0a0c14; }
+.board-area::-webkit-scrollbar-thumb { background: #1e2130; border-radius: 4px; }

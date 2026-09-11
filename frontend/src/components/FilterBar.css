@@ -1,0 +1,52 @@
+/* FilterBar.css */
+.filterbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: #0f1117;
+  border-bottom: 1px solid #1e2130;
+}
+
+.filterbar__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #5a6278;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-right: 4px;
+}
+
+.filterbar__btn {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #2d3248;
+  background: transparent;
+  color: #7a8399;
+  transition: all 0.18s;
+  font-family: inherit;
+}
+
+.filterbar__btn:hover {
+  border-color: #6c63ff;
+  color: #6c63ff;
+}
+
+.filterbar__btn--active {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+
+.filterbar__btn--high.filterbar__btn--active  { background: #e53e3e; border-color: #e53e3e; }
+.filterbar__btn--medium.filterbar__btn--active { background: #d69e2e; border-color: #d69e2e; }
+.filterbar__btn--low.filterbar__btn--active    { background: #38a169; border-color: #38a169; }
+
+.filterbar__count {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: #5a6278;
+}

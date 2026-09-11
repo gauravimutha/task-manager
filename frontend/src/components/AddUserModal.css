@@ -1,0 +1,132 @@
+/* AddUserModal.css */
+.add-user-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.add-user-modal {
+  background: #161925;
+  border: 1px solid #2d3248;
+  border-radius: 16px;
+  padding: 28px;
+  width: 380px;
+  max-width: 95vw;
+  animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.add-user-modal__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.add-user-modal__input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.add-user-modal__input {
+  flex: 1;
+  background: #0f1117;
+  border: 1px solid #2d3248;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-family: inherit;
+  padding: 9px 12px;
+  outline: none;
+  transition: border-color 0.18s;
+}
+
+.add-user-modal__input:focus { border-color: #6c63ff; }
+
+.add-user-modal__add-btn {
+  padding: 9px 16px;
+  background: linear-gradient(135deg, #6c63ff, #4f46e5);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.18s;
+}
+
+.add-user-modal__add-btn:hover { opacity: 0.85; }
+
+.add-user-modal__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #5a6278;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.add-user-modal__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  min-height: 32px;
+}
+
+.add-user-modal__user {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  background: #1e2130;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: #c8cde8;
+}
+
+.add-user-modal__remove {
+  background: none;
+  border: none;
+  color: #5a6278;
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.add-user-modal__remove:hover { color: #fc8181; }
+
+.add-user-modal__close {
+  width: 100%;
+  padding: 9px;
+  background: #1e2130;
+  border: 1px solid #2d3248;
+  border-radius: 8px;
+  color: #7a8399;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.18s;
+}
+
+.add-user-modal__close:hover { opacity: 0.8; }

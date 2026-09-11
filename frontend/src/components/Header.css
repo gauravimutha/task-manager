@@ -1,0 +1,73 @@
+/* Header.css */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  height: 64px;
+  background: #0f1117;
+  border-bottom: 1px solid #1e2130;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__logo {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #6c63ff, #3ecfcf);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.header__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e8eaf6;
+  letter-spacing: 0.3px;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s, transform 0.15s;
+  font-family: inherit;
+}
+
+.header__btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.header__btn--primary {
+  background: linear-gradient(135deg, #6c63ff, #4f46e5);
+  color: #fff;
+}
+
+.header__btn--secondary {
+  background: #1e2130;
+  color: #a0aec0;
+  border: 1px solid #2d3248;
+}
