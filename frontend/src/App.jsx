@@ -144,6 +144,7 @@ export default function App() {
         title: updatedTask.title,
         description: updatedTask.description,
         priority: updatedTask.priority,
+        status: updatedTask.columnId,
         due_date: updatedTask.dueDate || null,
       });
 

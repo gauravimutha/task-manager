@@ -59,9 +59,12 @@ const TaskController = {
   /** PUT /api/tasks/:id */
   async update(req, res, next) {
     try {
-      const { priority } = req.body;
+      const { priority, status } = req.body;
       if (priority && !VALID_PRIORITIES.includes(priority)) {
         return res.status(400).json({ success: false, error: `priority must be one of: ${VALID_PRIORITIES.join(', ')}` });
+      }
+      if (status && !VALID_STATUSES.includes(status)) {
+        return res.status(400).json({ success: false, error: `status must be one of: ${VALID_STATUSES.join(', ')}` });
       }
 
       const task = await TaskModel.update(req.params.id, req.body);

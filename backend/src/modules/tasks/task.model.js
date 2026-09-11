@@ -72,20 +72,22 @@ const TaskModel = {
   },
 
   /** Update task fields */
-  async update(id, { title, description, priority, due_date, position }) {
+  async update(id, { title, description, priority, status, due_date, position }) {
     const { rows } = await pool.query(
       `UPDATE tasks
        SET title       = COALESCE($1, title),
            description = COALESCE($2, description),
            priority    = COALESCE($3, priority),
-           due_date    = COALESCE($4, due_date),
-           position    = COALESCE($5, position)
-       WHERE id = $6
+           status      = COALESCE($4, status),
+           due_date    = COALESCE($5, due_date),
+           position    = COALESCE($6, position)
+       WHERE id = $7
        RETURNING *`,
       [
         title       || null,
         description || null,
         priority    || null,
+        status      || null,
         due_date    || null,
         position    != null ? position : null,
         id,
